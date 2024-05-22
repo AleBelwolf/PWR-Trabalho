@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100&display=swap');
+
+@media (min-width: 1020px) {
+    #ScreenMenu{
+        overflow: hidden;
+    }
+    * {
+        color: #10363f;
+    }
+    .screenTexto {
+        margin: 0px auto;
+        margin-bottom: 30px;
+        width: 80vw;
+    }
+    /* menu */
+    #bordaMenu {
+        display: none;
+    }
+    #logo {
+        width: 90px;
+        height: 120px;
+    }
+    #menu2 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        
+        background-color: #10363f;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    #itensMenu2 {
+        display: flex;
+        
+    }
+    #itensMenu2 li {
+        margin: 20px 10px; 
+        
+    }
+    #itensMenu2 li a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+    }
+    #itensMenu2 li a:hover {
+        color: white;
+    }
+    #itensMenu2 li a::after {
+        content: ' ';
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        
+        margin-bottom: -3px;
+        left: 0;
+        bottom: 0;
+
+        transition: width 0.5s;
+    }
+    #itensMenu2 li:nth-child(1) a::after {
+        background-image: linear-gradient(45deg, #0554F2 ,#092355 70%, transparent);
+    }
+    #itensMenu2 li:nth-child(2) a::after {
+        background-image: linear-gradient(45deg, #f1b504 ,#a77e05 70%, transparent);
+    }
+    #itensMenu2 li:nth-child(3) a::after {
+        background: linear-gradient(45deg, #e44134 ,#a12f27 70%, transparent);
+    }
+    #itensMenu2 li:nth-child(4) a::after {
+        background: linear-gradient(45deg, #38c45d ,#1a582b 70%, transparent);
+    }
+    #itensMenu2 li a:hover::after {
+        width: 100%;
+    }
+    /* texto dinamico */
+    
+    #wrapper {
+        position: relative;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -230%);
+    }
+    #wrapper #dinamico li {
+        font-size: 22px;
+        margin: auto;
+        transform: translate(0, 0);
+    }
+    #wrapper #estatico {
+        font-size: 25px;
+        margin: auto;
+    }
+    /* btn top */
+    #btnTop {
+        position: fixed;
+        background-color: #0554F2;
+        bottom: 35px;
+        right: 35px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .arrow {
+        border: solid white;
+        border-width: 0 7px 7px 0;
+        padding: 5px;
+        display: inline-block;
+    }
+    .up {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+}
+
